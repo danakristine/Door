@@ -27,7 +27,7 @@ def candyCane(color, color2):
         np.fill(color)
         for i in range(np.n):
             if (i + count) % 3 == 0:
-                np[i] = red
+                np[i] = color2
         np.show()
         time.sleep(.2)
 
@@ -38,4 +38,4 @@ def candyCane(color, color2):
 
 #main
 while True:
-  candyCane(red, white)
+  candyCane(white, red)
