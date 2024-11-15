@@ -1,3 +1,4 @@
 # NeoPixel Door Light Project
-## Members:Casey, Jack, Oly, Miking, Daniel, Fritz, Dana and Jacobi
+## Lead: Dana
+## Members:Casey, Jack, Oly, Miking, Daniel, Fritz and Jacobi
 ## Due: 11/22/2024
