@@ -4,7 +4,7 @@ from neopixel import NeoPixel
 import time
 import random
 
-np = NeoPixel(board.D2,30,auto_write = False,brightness = .3)
+np = NeoPixel(board.D2,30,auto_write = False,brightness = .1)
 
 #colors
 red = (230,15,0)
@@ -26,8 +26,12 @@ def candyCane(color, color2):
     for i in range(np.n):
         np.fill(color)
         for i in range(np.n):
-            if (i + count) % 3 == 0:
+            if (i + count) % 4 == 0:
                 np[i] = color2
+                
+            if (i + count) % 4 == 1:
+                np[i] = color2
+
         np.show()
         time.sleep(.2)
 
