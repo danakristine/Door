@@ -34,7 +34,6 @@ def candyCane(color, color2):
 
         np.show()
         time.sleep(.2)
-
         count = (count + 1) % 3
 
 
