@@ -28,15 +28,11 @@ def candyCane(color, color2):
         for i in range(np.n):
             if (i + count) % 4 == 0:
                 np[i] = color2
-                
             if (i + count) % 4 == 1:
                 np[i] = color2
-
         np.show()
         time.sleep(.2)
         count = (count + 1) % 3
-
-
 
 
 #main
