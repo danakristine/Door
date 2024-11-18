@@ -22,6 +22,19 @@ white = (255,255,255)
 
 #functions
 def candyCane(color, color2):
+    """
+    simulates pattern of candy cane 
+
+    parameters:
+    color (tuple): the rgb sequence of a specific color
+    color2 (tuple): the rgb sequence of a specific color
+
+    returns:
+    n/a
+
+    author:
+    Miking and Fritz with assistance from Casey
+    """
     count = 0
     for i in range(np.n):
         np.fill(color)
