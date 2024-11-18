@@ -32,7 +32,7 @@ def candyCane(color, color2):
     returns:
     n/a
 
-    author:
+    authors:
     Miking and Fritz with assistance from Casey
     """
     count = 0
