@@ -44,11 +44,14 @@ def candyCane(color, color2):
             if (i + count) % 4 == 1:
                 np[i] = color2
         np.show()
-        time.sleep(.2)
+        time.sleep(.12)
         count = (count + 1) % 3
 
 
 def snowfall(bg, fg, delay, times):
+    """
+    docstrings will be added eventually
+    """
     for i in range(times):
         one = random.randint(0,29)
         two = random.randint(0,29)
@@ -61,7 +64,18 @@ def snowfall(bg, fg, delay, times):
         time.sleep(delay)
 
 def wipe():
-#This fills up the entire strip with a chosen color
+"""
+This fills up the entire strip with a chosen color
+
+parameters:
+n/a
+
+returns:
+n/a
+
+authors:
+oly and jacobi
+"""
     for i in range(np.n -1, -1, -1):
         if (i == i-2) == 0:
             sign = i // 2
