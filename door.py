@@ -48,22 +48,8 @@ def candyCane(color, color2):
         count = (count + 1) % 3
 
 
-def snowfall(bg, fg, delay, times):
-    """
-    docstrings will be added eventually
-    """
-    for i in range(times):
-        one = random.randint(0,29)
-        two = random.randint(0,29)
-        three = random.randint(0,29)
-        np.fill(bg)
-        np[one] = fg
-        np[two] = fg
-        np[three] = fg
-        np.show()
-        time.sleep(delay)
 
-def wipe():
+def snowfall():
     """
     This fills up the entire strip with a chosen color
     
@@ -80,10 +66,12 @@ def wipe():
         if (i == i-2) == 0:
             sign = i // 2
             if i > np.n // 2: 
-                np[sign] = white
+                np[sign] = gray
             sine = i // -2
-            if i < np.n // -2: 
-                np[sine] = white
+            if i < np.n // -2:
+                np[sine] = gray
+            if i > np.n // 2:
+                np[sine] = gray
             np.show()
             time.sleep(0.1)
 
@@ -167,3 +155,4 @@ def dots(dotColor = darkGreen, black = (0,0,0), endColor = red, i = 0, b = (np.n
 while True:
     candyCane(white, red)
     dots()
+    snowfall()
