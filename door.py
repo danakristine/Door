@@ -156,3 +156,19 @@ while True:
     candyCane(white, red)
     dots()
     snowfall()
+
+
+    
+def hannukah(bckgr,flicker,flicker2,speed,tim1):
+    np.fill(bckgr)
+    np.show()
+    for i in range(tim1):
+        np[random.randint(0,np.n-2)] = flicker
+        np.show()
+        time.sleep(speed)
+        np[random.randint(0,np.n-2)] = flicker2
+        np.show()
+        time.sleep(speed)
+        
+while True:
+    hannukah((255,255,255),(0,0,255), (255, 255, 0),.4,.4)
