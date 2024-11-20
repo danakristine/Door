@@ -64,18 +64,18 @@ def snowfall(bg, fg, delay, times):
         time.sleep(delay)
 
 def wipe():
-"""
-This fills up the entire strip with a chosen color
-
-parameters:
-n/a
-
-returns:
-n/a
-
-authors:
-oly and jacobi
-"""
+    """
+    This fills up the entire strip with a chosen color
+    
+    parameters:
+    n/a
+    
+    returns:
+    n/a
+    
+    authors:
+    oly and jacobi
+    """
     for i in range(np.n -1, -1, -1):
         if (i == i-2) == 0:
             sign = i // 2
