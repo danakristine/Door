@@ -104,11 +104,10 @@ def reverseWipe(color):
 def sparkle(baseColor, sparkleColor, speed, numSpark):
     np.fill(baseColor)                                                                                           
     for i in range(numSpark):
-        y = random.randint(0, 29)
+        y = random.randint(0, (np.n -1))
         np[y] = sparkleColor
         time.sleep(speed)
     np.show()
-
 y = 0
 def dots(dotColor = darkGreen, black = (0,0,0), endColor = red, i = 0, b = (np.n - 1), timesleep = 0.1, count = 0):
     """
@@ -132,23 +131,26 @@ def dots(dotColor = darkGreen, black = (0,0,0), endColor = red, i = 0, b = (np.n
         np[(i - 1) % np.n] = black
         i = (i + 1) % np.n
         
+        
         np[b] = (dotColor)
         np[(b + 1) % np.n] = black
         b = (b - 1) % np.n
+        
         np.show()
         time.sleep(timesleep) 
-	
         if(i == (np.n / 2)):
             for l in range(np.n - 1):
                 if l % 2 == 0:
                     np[l] = red
                 else:
                     np[l] = green
+            time.sleep(2)
             np.show()
 
         if(y % 2 == 1):
             black = (0,0,0)
             dotColor = darkGreen
+            
         
     wipee(red)
     for i in range(13):
