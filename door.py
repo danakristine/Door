@@ -22,7 +22,14 @@ white = (255,255,255)
 gray = (100,100,100)
 black = (0,0,0)
 
-#functions
+#variables
+lsts = [red, white,green]
+lst = [white,white,white]
+y = 0
+
+#main functions
+#ONLY ADD FUNCTIONS THAT ARE CALLED IN THE MAIN LOOP
+
 def candyCane(color, color2):
     """
     simulates pattern of candy cane 
@@ -49,8 +56,6 @@ def candyCane(color, color2):
         time.sleep(.12)
         count = (count + 1) % 3
 
-
-
 def snowfall():
     """
     This fills up the entire strip with a chosen color
@@ -62,7 +67,7 @@ def snowfall():
     n/a
     
     authors:
-    oly and jacobi
+    Oly & Jacobi
     """
     for i in range(np.n -1, -1, -1):
         if (i == i-2) % 3 == 0:
@@ -88,36 +93,15 @@ def snowfall():
         np.show()
         count = (count + x) % 3
 
-def wipe(color):
-    for i in range(np.n):
-        np[i] = color
-        np.show()
-        time.sleep(0.06)
-        
-def reverseWipe(color):
-    for i in range(np.n - 1, -1, -1):
-        np[i] = color
-        np.show()
-        time.sleep(0.06)
-        
-def sparkle(baseColor, sparkleColor, speed, numSpark):
-    np.fill(baseColor)                                                                                           
-    for i in range(numSpark):
-        y = random.randint(0, (np.n -1))
-        np[y] = sparkleColor
-        time.sleep(speed)
-    np.show()
 
-
-y = 0
 def dots(dotColor = darkGreen, black = (0,0,0), endColor = red, i = 0, b = (np.n - 1), timesleep = 0.1, count = 0):
     """
     two dots meet halfway in the center then once cross paths they fill the neopixels with the endColor as they reach the ends
     
     parameters:
-    dotColor (tuple): the rgb sequence of a specific color: set to orange
+    dotColor (tuple): the rgb sequence of a specific color: set to darkGreen
     black (tuple): the rgb sequence of a specific color: set to (0,0,0)
-    endColor (tuple): the rgb sequence of a specific color: set to purple
+    endColor (tuple): the rgb sequence of a specific color: set to red
     i (int): set to 0
     b (int): set to # of pixels - 1
     timesleep (double): set to 0.03
@@ -125,6 +109,9 @@ def dots(dotColor = darkGreen, black = (0,0,0), endColor = red, i = 0, b = (np.n
     
     returns:
     n/a
+
+    authors:
+    Casey & Dana 
     """
     global y
     for x in range(np.n):
@@ -165,41 +152,70 @@ def dots(dotColor = darkGreen, black = (0,0,0), endColor = red, i = 0, b = (np.n
     time.sleep(0.2)
 
 
-def hannukah(bckgr,flicker,flicker2,speed,tim1):
-    np.fill(bckgr)
-    np.show()
-    for i in range(tim1):
-        np[random.randint(0,np.n-2)] = flicker
-        np.show()
-        time.sleep(speed)
-        np[random.randint(0,np.n-2)] = flicker2
-        np.show()
-        time.sleep(speed)
+def lightWork():
+    """
+    This is the set of code that will show christmas lightwork on the leds. Fritz made this
+    
+    parameters:
+    n/a 
 
+    returns:
+    n/a
+
+    authors:
+    Fritz & Miking
+    """
+    chase1(lsts)
+    reverse_wipe(lst)
+    reverse_wipe(lsts)
+
+
+#inside functions
+#ONLY ADD FUNCTIONS THAT ARE CALLED IN OTHER FUNCTIONS HERE
+def wipe(color):
+    for i in range(np.n):
+        np[i] = color
+        np.show()
+        time.sleep(0.06)
+        
+def reverseWipe(color):
+    for i in range(np.n - 1, -1, -1):
+        np[i] = color
+        np.show()
+        time.sleep(0.06)
+        
+def sparkle(baseColor, sparkleColor, speed, numSpark):
+    np.fill(baseColor)                                                                                           
+    for i in range(numSpark):
+        y = random.randint(0, (np.n -1))
+        np[y] = sparkleColor
+        time.sleep(speed)
+    np.show()
 
 def chase1(colors):
     for i in range(np.n):
         np[i] = colors[i%len(colors)]
         np.show()
         time.sleep(0.04)
-    """
-Reverse_wipe will be used to wipe chase1 depending on the list of colors
-    """
+    
 def reverse_wipe(colors):
+    """
+    Reverse_wipe will be used to wipe chase1 depending on the list of colors
+
+    parameters:
+    colors(list): 
+
+    returns:
+    n/a
+
+    authors:
+    Fritz & Miking
+    """
     for i in range(np.n):
         i = i* -1
         np[i] = random.choice(colors)
         np.show()
         time.sleep(0.04)
-
-# These lists are meant to be used in the code as guidelines for what colors to use in each function call. Fritz made these lists
-lsts = [red, white,green]
-lst = [white,white,white]
-# This is the set of code that will show christmas lightwork on the leds. Fritz made this
-while True:
-    chase1(lsts)
-    reverse_wipe(lst)
-    reverse_wipe(lsts)
 
 
 #main
@@ -207,6 +223,4 @@ while True:
     candyCane(white, red)
     dots()
     snowfall()
-    chase1(lsts)
-    reverse_wipe(lst)
-    reverse_wipe(lsts)
+    lightWork()
