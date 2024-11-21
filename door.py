@@ -173,18 +173,39 @@ def lightWork():
 #inside functions
 #ONLY ADD FUNCTIONS THAT ARE CALLED IN OTHER FUNCTIONS HERE
 def wipe(color):
+    """
+    docstrings will be added!
+    """
     for i in range(np.n):
         np[i] = color
         np.show()
         time.sleep(0.06)
         
 def reverseWipe(color):
+    """
+    docstrings will be added!
+    """
     for i in range(np.n - 1, -1, -1):
         np[i] = color
         np.show()
         time.sleep(0.06)
         
 def sparkle(baseColor, sparkleColor, speed, numSpark):
+    """
+    simulates a sparkling effect with a solid background
+    
+    parameters:
+    baseColor (tuple): the rgb sequence of a specific color
+    sparkleColor (tuple): the rgb sequence of a specific color
+    numSpark (int): number of sparkles shown
+    speed (double): the speed at which the sparkles show: set to 0.015
+    
+    returns:
+    n/a
+
+    authors:
+    Dana
+    """
     np.fill(baseColor)                                                                                           
     for i in range(numSpark):
         y = random.randint(0, (np.n -1))
@@ -193,6 +214,9 @@ def sparkle(baseColor, sparkleColor, speed, numSpark):
     np.show()
 
 def chase1(colors):
+    """
+    docstrings will be added!
+    """
     for i in range(np.n):
         np[i] = colors[i%len(colors)]
         np.show()
@@ -203,7 +227,7 @@ def reverse_wipe(colors):
     Reverse_wipe will be used to wipe chase1 depending on the list of colors
 
     parameters:
-    colors(list): 
+    colors(list): a list containing tuples of rgb color sequences
 
     returns:
     n/a
