@@ -162,15 +162,6 @@ def hannukah(bckgr,flicker,flicker2,speed,tim1):
         np[random.randint(0,np.n-2)] = flicker2
         np.show()
         time.sleep(speed)
-#main
-while True:
-    candyCane(white, red)
-    dots()
-    snowfall()
-    hannukah((255,255,255),(0,0,255), (255, 255, 0),.4,.4)
-
-
-
 
 def chase1(colors):
     for i in range(np.n):
@@ -190,7 +181,12 @@ Reverse wipe is used to
              
 lsts = [red, white,green]
 lst = [white,white,white]
+
+#main
 while True:
+    candyCane(white, red)
+    dots()
+    snowfall()
     chase1(lsts)
     reverse_wipe(lst)
     reverse_wipe(lsts)
