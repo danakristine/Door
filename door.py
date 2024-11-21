@@ -242,7 +242,7 @@ def reverse_wipe(colors):
         time.sleep(0.04)
 
 
-#main
+#main loop
 while True:
     candyCane(white, red)
     dots()
