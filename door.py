@@ -65,17 +65,28 @@ def snowfall():
     oly and jacobi
     """
     for i in range(np.n -1, -1, -1):
-        if (i == i-2) == 0:
+        if (i == i-2) % 3 == 0:
             sign = i // 2
-            if i > np.n // 2: 
-                np[sign] = gray
+            if i < np.n // 2:
+                np[sign] = white
             sine = i // -2
-            if i < np.n // -2:
-                np[sine] = gray
-            if i > np.n // 2:
-                np[sine] = gray
+            if i > np.n // - 2:
+                np[sine] = white
+            np[i] = white
             np.show()
             time.sleep(0.1)
+        if (i == i+2) % 3 == 0:
+            if i > np.n // -2:
+                np[sine] = white
+    count = 0
+    for x in range(np.n):
+        if x < np.n // 3:
+            for x in range(np.n):
+                if (x + count) % 3 == 0:
+                    np[x] = (black)
+        time.sleep(0.2)
+        np.show()
+        count = (count + x) % 3
 
 def wipe(color):
     for i in range(np.n):
