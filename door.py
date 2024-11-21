@@ -215,7 +215,16 @@ def sparkle(baseColor, sparkleColor, speed, numSpark):
 
 def chase1(colors):
     """
-    docstrings will be added!
+    chase1 is meant to make a line of colors down a row seemingly moving
+
+    parameters:
+    chase1(colors): a list containing tuples of rgb color sequences
+
+    returns:
+    n/a
+
+    authors:
+    Fritz & Miking
     """
     for i in range(np.n):
         np[i] = colors[i%len(colors)]
