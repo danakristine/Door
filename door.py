@@ -19,6 +19,8 @@ lightGreen = (70,247,70)
 orange = (250,75,5)
 darkGreen = (1, 40, 2)
 white = (255,255,255)
+gray = (100,100,100)
+black = (0,0,0)
 
 #functions
 def candyCane(color, color2):
