@@ -141,12 +141,12 @@ def dots(dotColor = darkGreen, black = (0,0,0), endColor = red, i = 0, b = (np.n
             
         
     wipe(red)
-    for i in range(13):
+    for i in range(27):
         sparkle(red, white, 0.015, 5)
     np.fill(red)
     time.sleep(0.2)
     reverseWipe(green)
-    for i in range(13):
+    for i in range(27):
         sparkle(green, white, 0.015, 5)
     np.fill(green)
     time.sleep(0.2)
