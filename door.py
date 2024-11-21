@@ -182,6 +182,12 @@ Reverse wipe is used to
 lsts = [red, white,green]
 lst = [white,white,white]
 
+def pink():
+    chase1(lsts)
+    reverse_wipe(lst)
+    reverse_wipe(lsts)
+
+
 #main
 while True:
     candyCane(white, red)
