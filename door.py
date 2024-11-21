@@ -75,9 +75,7 @@ def snowfall():
             np.show()
             time.sleep(0.1)
 
-
-
-def wipee(color):
+def wipe(color):
     for i in range(np.n):
         np[i] = color
         np.show()
@@ -96,6 +94,8 @@ def sparkle(baseColor, sparkleColor, speed, numSpark):
         np[y] = sparkleColor
         time.sleep(speed)
     np.show()
+
+
 y = 0
 def dots(dotColor = darkGreen, black = (0,0,0), endColor = red, i = 0, b = (np.n - 1), timesleep = 0.1, count = 0):
     """
@@ -140,7 +140,7 @@ def dots(dotColor = darkGreen, black = (0,0,0), endColor = red, i = 0, b = (np.n
             dotColor = darkGreen
             
         
-    wipee(red)
+    wipe(red)
     for i in range(13):
         sparkle(red, white, 0.015, 5)
     np.fill(red)
@@ -151,14 +151,7 @@ def dots(dotColor = darkGreen, black = (0,0,0), endColor = red, i = 0, b = (np.n
     np.fill(green)
     time.sleep(0.2)
 
-#main
-while True:
-    candyCane(white, red)
-    dots()
-    snowfall()
 
-
-    
 def hannukah(bckgr,flicker,flicker2,speed,tim1):
     np.fill(bckgr)
     np.show()
@@ -169,6 +162,9 @@ def hannukah(bckgr,flicker,flicker2,speed,tim1):
         np[random.randint(0,np.n-2)] = flicker2
         np.show()
         time.sleep(speed)
-        
+#main
 while True:
+    candyCane(white, red)
+    dots()
+    snowfall()
     hannukah((255,255,255),(0,0,255), (255, 255, 0),.4,.4)
