@@ -163,26 +163,27 @@ def hannukah(bckgr,flicker,flicker2,speed,tim1):
         np.show()
         time.sleep(speed)
 
+
 def chase1(colors):
     for i in range(np.n):
         np[i] = colors[i%len(colors)]
         np.show()
         time.sleep(0.04)
-
+    """
+Reverse_wipe will be used to wipe chase1 depending on the list of colors
+    """
 def reverse_wipe(colors):
-    """
-Reverse wipe is used to 
-    """
     for i in range(np.n):
         i = i* -1
         np[i] = random.choice(colors)
         np.show()
         time.sleep(0.04)
-             
+
+# These lists are meant to be used in the code as guidelines for what colors to use in each function call. Fritz made these lists
 lsts = [red, white,green]
 lst = [white,white,white]
-
-def pink():
+# This is the set of code that will show christmas lightwork on the leds. Fritz made this
+while True:
     chase1(lsts)
     reverse_wipe(lst)
     reverse_wipe(lsts)
