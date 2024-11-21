@@ -168,3 +168,29 @@ while True:
     dots()
     snowfall()
     hannukah((255,255,255),(0,0,255), (255, 255, 0),.4,.4)
+
+
+
+
+def chase1(colors):
+    for i in range(np.n):
+        np[i] = colors[i%len(colors)]
+        np.show()
+        time.sleep(0.04)
+
+def reverse_wipe(colors):
+    """
+Reverse wipe is used to 
+    """
+    for i in range(np.n):
+        i = i* -1
+        np[i] = random.choice(colors)
+        np.show()
+        time.sleep(0.04)
+             
+lsts = [red, white,green]
+lst = [white,white,white]
+while True:
+    chase1(lsts)
+    reverse_wipe(lst)
+    reverse_wipe(lsts)
