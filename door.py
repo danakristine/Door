@@ -69,19 +69,19 @@ def snowfall():
     authors:
     Oly & Jacobi
     """
-   half = np.n// 2
+    half = np.n// 2
     for i in range(half):
         np[half - 1 - i] = white
         np[half + i] = white
         time.sleep(0.2)
         np.show()
-        count = 0
+    count = 0
     for x in range(np.n):
         if x < np.n // 3 :
             for x in range(np.n):
                 if (x + count) % 3 == 0:
                     np[x] = (black)
-        time.sleep(0.25)
+        time.sleep(0.4)
         np.show()
         count = (count + x) % 3
 
@@ -265,8 +265,8 @@ def reverse_wipe(colors):
 while True:
     candyCane(white, red)
     dots()
-    for i in range(3):
-        snowfall()
+    snowfall()
     for i in range(3):
         lightWork()
     
+
