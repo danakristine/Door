@@ -141,12 +141,12 @@ def dots(dotColor = darkGreen, black = (0,0,0), endColor = red, i = 0, b = (np.n
             
         
     wipe(red)
-    for i in range(27):
+    for i in range(35):
         sparkle(red, white, 0.015, 5)
     np.fill(red)
     time.sleep(0.2)
     reverseWipe(green)
-    for i in range(27):
+    for i in range(35):
         sparkle(green, white, 0.015, 5)
     np.fill(green)
     time.sleep(0.2)
@@ -273,5 +273,8 @@ def reverse_wipe(colors):
 while True:
     candyCane(white, red)
     dots()
-    snowfall()
-    lightWork()
+    for i in range(3):
+        snowfall()
+    for i in range(3):
+        lightWork()
+    
