@@ -174,7 +174,16 @@ def lightWork():
 #ONLY ADD FUNCTIONS THAT ARE CALLED IN OTHER FUNCTIONS HERE
 def wipe(color):
     """
-    docstrings will be added!
+    Changes the lights in a sequential order to a determined color 
+    
+    parameters:
+    Color (tuple): the rgb sequence of a specific color
+    
+    returns:
+    n/a
+
+    authors:
+    Dana 
     """
     for i in range(np.n):
         np[i] = color
@@ -183,7 +192,16 @@ def wipe(color):
         
 def reverseWipe(color):
     """
-    docstrings will be added!
+    Changes the lights in a  reverse sequential order to a determined color
+    
+    parameters:
+    Color (tuple): the rgb sequence of a specific color
+    
+    returns:
+    n/a
+
+    authors:
+    Dana 
     """
     for i in range(np.n - 1, -1, -1):
         np[i] = color
