@@ -42,7 +42,7 @@ def candyCane(color, color2):
     n/a
 
     authors:
-    Miking and Fritz with assistance from Casey
+    Jack and Daniel with assistance from Casey
     """
     count = 0
     for i in range(np.n):
