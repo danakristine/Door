@@ -69,27 +69,19 @@ def snowfall():
     authors:
     Oly & Jacobi
     """
-    for i in range(np.n -1, -1, -1):
-        if (i == i-2) % 3 == 0:
-            sign = i // 2
-            if i < np.n // 2:
-                np[sign] = white
-            sine = i // -2
-            if i > np.n // - 2:
-                np[sine] = white
-            np[i] = white
-            np.show()
-            time.sleep(0.1)
-        if (i == i+2) % 3 == 0:
-            if i > np.n // -2:
-                np[sine] = white
-    count = 0
+   half = np.n// 2
+    for i in range(half):
+        np[half - 1 - i] = white
+        np[half + i] = white
+        time.sleep(0.2)
+        np.show()
+        count = 0
     for x in range(np.n):
-        if x < np.n // 3:
+        if x < np.n // 3 :
             for x in range(np.n):
                 if (x + count) % 3 == 0:
                     np[x] = (black)
-        time.sleep(0.2)
+        time.sleep(0.25)
         np.show()
         count = (count + x) % 3
 
